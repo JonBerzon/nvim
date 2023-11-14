@@ -30,3 +30,25 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 -- chmod +x current file
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+-- Telescope remaps
+vim.keymap.set('n', '<leader>sf', require('telescope.builtin').find_files, {})
+vim.keymap.set('n', '<C-p>', require('telescope.builtin').git_files, {})
+vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
+
+-- Undootree remaps
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+
+-- Harpoon remaps
+local mark = require("harpoon.mark")
+local ui = require("harpoon.ui")
+
+vim.keymap.set("n", "<leader>a", mark.add_file)
+vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
+vim.keymap.set("n", "<C-h>", function() ui.nav_file(1) end)
+vim.keymap.set("n", "<C-t>", function() ui.nav_file(2) end)
+vim.keymap.set("n", "<C-n>", function() ui.nav_file(3) end)
+vim.keymap.set("n", "<C-s>", function() ui.nav_file(4) end)
+
+-- Fugitive remaps
+vim.keymap.set("n", "<leader>gs", vim.cmd.Git);
