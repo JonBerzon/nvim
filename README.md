@@ -2,6 +2,11 @@
 ### Package Manager
 1. Uses lazyvim as package manager - https://github.com/LazyVim/LazyVim
 
+### LSP
+1. Uses lsp-zero - https://github.com/VonHeikemen/lsp-zero.nvim
+2. To setup a new language, go to specific file type (.cpp, .go, etc) and type :LspInstall
+3. Quit and re-enter file to finish installation process
+
 ### Commands
 1. Add remaps to `nvim/lua/jberzon/remap.lua`
 2. Add vim settings to `nvim/lua/jberzon/set.lua`
