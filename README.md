@@ -1,8 +1,6 @@
 # Basic Info
-### Packages
-1. Add the import to `nvim/lua/jberzon/packer.lua`
-2. Make the config and add necessary config code to `nvim/after/plugin/<package_name>.lua`
-3. Source new file with `:so` and sync with Packer with `:PackerSync`
+### Package Manager
+1. Uses lazyvim as package manager - https://github.com/LazyVim/LazyVim
 
 ### Commands
 1. Add remaps to `nvim/lua/jberzon/remap.lua`
